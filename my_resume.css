@@ -1,0 +1,24 @@
+h1{
+    color: blueviolet;
+}
+.box{
+    margin: 10px;
+    border: 1px;
+    border-style: solid;
+    background-color: rgb(208, 233, 68);
+    padding: 10px;
+    color: rgb(119, 72, 19);
+}
+.text{
+    margin: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    color: rgb(129, 16, 40);
+}
+.highlight {
+    /* color: var(--primary-color); */
+    outline: 3px solid gold;
+    background-color: yellow;
+    margin: 10px;
+  }

@@ -5,57 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蔡德誠的履歷</title>
+    <link rel="stylesheet" href="my_resume.css">
 </head>
 
 <body>
+    <h1>CSS 選擇器 Highlighter</h1>
+    <p>請輸入 CSS 選擇器：</p>
+    <input type="text" id="selector" />
+    <button type="button" onclick="doHighlight()">送出</button>
+    <hr />
     <article>
         <h1>履歷表</h1>
         <section>
-            <h1>蔡德誠Ted</h1>
-            <p>後端工程師、全端工程師</p>
-            <p>學歷:國立彰化師範大學數學系畢業</p>
+            <h1 class="box">蔡德誠Ted</h1>
+            <p class="text">後端工程師、全端工程師
+                <br >學歷:國立彰化師範大學數學系畢業
+            </p>
+            
             
         </section>
         <section>
-            <h1>社群媒體</h1>
-            <dl>
+            <h1 class="box">社群媒體</h1>
+            <dl class="text">
                 <dt>github:</dt>
                 <dd><a href="//github.com/t8lionchion/mynote">我的連結</a></dd>
+                <hr />
                 <dt>line:</dt>
                 <dd>0909138256</dd>
+                <hr />
                 <dt>電子郵件：</dt>
                 <dd>tygfuidseujzx@gmail.com</a></dd>
             </dl>
         </section>
         <aside>
-            <p>用數學理解程式</p>
+            <p class="highlight">用數學理解程式</p>
         </aside>
         <section>
-            <h1>關於我</h1>
-            <p>熱忱且積極進取的後端工程師，畢業於國立彰化師範大學數學系資訊組。掌握 Python（Flask/Django）、Kotlin、HTML+CSS 、JavaScript以及 MySQL 資料庫，具備系統設計與
+            <h1 class="box">關於我</h1>
+            <p class="text">熱忱且積極進取的後端工程師，畢業於國立彰化師範大學數學系資訊組。掌握 Python（Flask/Django）、Kotlin、HTML+CSS 、JavaScript以及 MySQL 資料庫，具備系統設計與
                 API 開發實作經驗。曾在課堂上獨立開發火車查詢系統，具備良好的問題解決能力與團隊合作精神，期待加入專業團隊後持續精進後端開發技能，並為公司創造價值。</p>
         </section>
 
         <section>
 
-            <h1>專長</h1>
-            <ul>
+            <h1 class="box">專長</h1>
+            <ul class="text">
                 <li>Git :
                     <br>掌握git使用流程(會用git上傳、修改作品到github，了解git架構，了結如何透過git flow和人合作)
                 </li>
-
+                <hr />  
                 <li>Python
                     <br>掌握語法架構，有透過python開發後端的經驗
                 </li>
-
+                <hr />
                 <li>MySQL
                     <br>掌握MySQL基本操作(包括:創建資料庫、維護、管理、快速查詢等功能)
                 </li>
-
+                <hr />
                 <li>Kotlin
                     <br>掌握Kotlin基本語法架構。
                 </li>
-
+                <hr />
                 <li>Java
                     <br>基本語法和物件會使用。
                 </li>
@@ -64,17 +74,25 @@
         </section>
 
         <section>
-            <h1>工作經歷</h1>
-            <ol>
+            <h1 class="box">工作經歷</h1>
+            <ol class="text">
                 <li>學生</li>
                 <li>無業遊民</li>
-                <li>家族企業</li>
+                <li>地下拳館打手</li>
+                <li>家族企業實習生</li>
+                <li>家族企業主管</li>
+                <li>家族企業經理</li>
+                <li>家族企業總經理</li>
+                <li>家族企業副總經理</li>
+                <li>家族企業執行長</li>
+                <li>家族企業副總裁</li>
+                <li>家族企業總裁</li>
             </ol>
         </section>
 
         <section>
-            <h1>自傳</h1>
-            <p>我是蔡德誠，畢業於國立彰化師範大學數學系資訊組。四年的大學學習不僅培養了我扎實的邏輯思維與數學基礎，也讓我對程式開發產生了濃厚的興趣。在學期間，我接觸到 Python、Kotlin 與 MySQL
+            <h1 class="box">自傳</h1>
+            <p class="text">我是蔡德誠，畢業於國立彰化師範大學數學系資訊組。四年的大學學習不僅培養了我扎實的邏輯思維與數學基礎，也讓我對程式開發產生了濃厚的興趣。在學期間，我接觸到 Python、Kotlin 與 MySQL
                 等技術，並完成了數個具有挑戰性的專案，逐步奠定了我對後端開發的熱情與專業基礎。
                 在學期間，我曾完成火車查詢系統的專案，負責後端架構設計、資料庫建模與 API 開發。該專案使用 Python 編寫商業邏輯，並採用 MySQL
                 儲存並管理火車數據，成功實現即時的時刻表與票價查詢功能。在這個過程中，我學會如何從需求分析到系統設計進行完整的實作，也逐漸熟悉如何將前後端整合，提升使用者體驗。
@@ -86,9 +104,28 @@
                 開發，並持續學習雲端技術與微服務架構。我期待藉由實際參與開發專案，不斷提升自己的技術能力，為公司創造價值的同時，逐步實現成為資深工程師的職涯目標
                 。</p>
         </section>
+        <script>
+            function doHighlight() {
+              // 清除所有樣式
+              const allElements = document.querySelectorAll(".box");
+              console.log('allElements 有幾個？', allElements.length);
+              allElements.forEach((element) => {
+                element.classList.remove("box");
+              });
+      
+              // 取得使用者輸入的 CSS 選擇器
+              const selector = document.getElementById("selector").value;
+              console.log('selector 是什麼值？', selector);
+              const elements = document.querySelectorAll(selector);
+              elements.forEach((element) => {
+                element.classList.add("highlight");
+              });
+            }
+          </script>
+        <hr />
         <footer>
-            <p>版權所有 &copy; 2025 蔡德誠</p>
-            <p>聯絡地址：秘密</p>
+            <p class="text">版權所有 &copy; 2025 蔡德誠</p>
+            <p class="text">聯絡地址：秘密</p>
         </footer>
     </article>
 
